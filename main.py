@@ -3,8 +3,11 @@
 '''Just a price calculator in Euros for the current energy price laws adopted in Spain'''
 
 HEPH = 0.40739  # Highest Energy Price per hour
+AEPH = 0.25861  # Average Energy Price per hour
 
 def calc_en() -> str:
+    '''E(kWh/day) = P(W) * t(h/day) / 1000(W/kW)
+    Returns the consumption in Euros.'''
     # kWh
     potency = int(input("Cual es la potencia tu electrodoméstico? **Como pone en la etiqueta por favor (kWh/1000h)** \n"))
     
@@ -13,6 +16,7 @@ def calc_en() -> str:
     
     # potency/1000h = Wh
     kwh = potency / 1000
+    print(kwh)
     
     # Wh * price per hour
     kwh_hour = kwh * HEPH
