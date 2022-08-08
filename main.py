@@ -18,7 +18,7 @@ def calc_en() -> str:
     kwh = potency / 1000
     print(kwh)
     
-    # Wh * price per hour
+    # Wh * high price per hour
     kwh_hour = kwh * HEPH
     kwh_day = kwh_hour * hours_per_day
     kwh_month = kwh_day * 30
